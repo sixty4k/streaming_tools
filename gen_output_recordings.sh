@@ -25,6 +25,13 @@ upload_and_remove_local_file() {
 }
 
 build_output_name() {
+	## output_name should be:
+	# - dj name
+	# - show name
+	# - show date
+	# - show title
+	## ex: sixty4k_mwmr_20220117_full_moon_rambling.<extension>
+
   mkv_file=$1
   file_date=$(echo ${mkv_file} | cut -d' ' -f1 | sed -e's/-//g' )
   dj="sixty4k"
@@ -34,17 +41,14 @@ build_output_name() {
   return "${dj}_${show}_${file_date}_${title}"
 }
 
+main() {
 mkv_file=$1
 ## standard OBS file name:
 # "2022-01-17 19-07-07.mkv"
 
+output_name=
 
-output_name=$2
+}
 
-## output_name should be:
-# - dj name
-# - show name
-# - show date
-# - show title
-## ex: sixty4k_mwmr_20220117_full_moon_rambling.<extension>
+
 
