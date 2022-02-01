@@ -37,7 +37,7 @@ build_output_name() {
   dj="sixty4k"
   show="mwmr"
   title="just_a_regular_monday"
-  
+    
   return "${dj}_${show}_${file_date}_${title}"
 }
 
@@ -46,7 +46,7 @@ mkv_file=$1
 ## standard OBS file name:
 # "2022-01-17 19-07-07.mkv"
 
-output_name=
+output_name=  
 
 }
 
